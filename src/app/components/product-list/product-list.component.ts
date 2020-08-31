@@ -21,10 +21,6 @@ export class ProductListComponent implements OnInit, OnDestroy, AfterViewInit, O
     );
   }
 
-  ngOnDestroy(): void {
-    console.log('destroy list');
-  }
-// todo nu am inteles
     handleProductAddedToFavorite(product: Product): void {
       if (this.productsFavorite.find(item => item.id === product.id)) {
         this.productsFavorite = this.productsFavorite.filter(item => item.id !== product.id);
@@ -33,6 +29,9 @@ export class ProductListComponent implements OnInit, OnDestroy, AfterViewInit, O
       }
     }
 
+  ngOnDestroy(): void {
+    console.log('destroy list');
+  }
   ngAfterViewInit(): void {
     console.log('after view list');
   }

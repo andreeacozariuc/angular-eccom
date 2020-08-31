@@ -17,14 +17,13 @@ export class ProductItemComponent implements OnInit, OnDestroy, AfterViewInit, O
 
   addProductToFavorite(): void {
     this.productAddedToFavorite.emit(this.product);
-    console.log("ceva ceva");
   }
 
   ngOnInit(): void {
   }
   ngOnDestroy(): void {
     console.log('destroy item');
-  };
+  }
 
   ngAfterViewInit(): void {
     console.log('after view item');

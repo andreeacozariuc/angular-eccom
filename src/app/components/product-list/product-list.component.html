@@ -8,7 +8,8 @@
     ngClass.xl="product-list-lg"
     fxLayout="row wrap">
     <div class="product-list_container_item" *ngFor="let product of products">
-      <app-product-item (productAddedToFavorite)="handleProductAddedToFavorite($event)" [product]="product"></app-product-item>
+      <app-product-item (productAddedToFavorite)="handleProductAddedToFavorite($event)"
+                        [product]="product"></app-product-item>
     </div>
   </div>
 </div>
