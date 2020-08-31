@@ -1,0 +1,14 @@
+<div>{{ productsFavorite | json }}</div>
+<div class="product-list">
+  <div
+    ngClass.xs="product-list-xs"
+    ngClass.sm="product-list-sm"
+    ngClass.md="product-list-md"
+    ngClass.lg="product-list-lg"
+    ngClass.xl="product-list-lg"
+    fxLayout="row wrap">
+    <div class="product-list_container_item" *ngFor="let product of products">
+      <app-product-item (productAddedToFavorite)="handleProductAddedToFavorite($event)" [product]="product"></app-product-item>
+    </div>
+  </div>
+</div>
